@@ -8,11 +8,6 @@
     "useApackDependencies": false
   },
   "dependencies": [
-    {
-      "url": "https://github.com/abaplint/deps",
-      "folder": "/deps",
-      "files": "/src/**/*.*"
-    }
   ],
   "syntax": {
     "version": "v702",
