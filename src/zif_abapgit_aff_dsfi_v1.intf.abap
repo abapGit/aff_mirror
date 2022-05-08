@@ -23,6 +23,7 @@ INTERFACE zif_abapgit_aff_dsfi_v1
       header         TYPE zif_abapgit_aff_types_v1=>ty_header_60_src,
       "! <p class="shorttext">Scalar Function Name</p>
       "! The name of the scalar function
+      "! $required
       scalar_function_name TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
       "! <p class="shorttext">Engine</p>
       "! Engine
