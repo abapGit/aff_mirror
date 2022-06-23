@@ -9,7 +9,8 @@ done
 for x in src/*.xml; do
   clsname=$(basename "$x" .intf.xml)
   clsnameUPPER=`echo $clsname | tr a-z A-Z`
-  echo '<?xml version="1.0" encoding="utf-8"?>' > $x
+  printf '\xEF\xBB\xBF' > $x
+  echo '<?xml version="1.0" encoding="utf-8"?>' >> $x
   echo '<abapGit version="v1.0.0" serializer="LCL_OBJECT_INTF" serializer_version="v1.0.0">' >> $x
   echo ' <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">' >> $x
   echo '  <asx:values>' >> $x
