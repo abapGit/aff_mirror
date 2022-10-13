@@ -6,7 +6,7 @@ for x in src/*.abap; do
 done
 
 for x in src/*.abap; do
-  sed -i '/\(^\s\*"!\)/d' $x
+  sed -i '/\(^\s*"!\)/d' $x
 done
 
 for x in src/*.xml; do
