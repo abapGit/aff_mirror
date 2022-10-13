@@ -5,6 +5,9 @@ for x in src/*.abap; do
   cp $x ${x%.*}.xml
 done
 
+for x in src/*.abap; do
+  sed -i '/\(^\s\*"!\)/d' $x
+done
 
 for x in src/*.xml; do
   clsname=$(basename "$x" .intf.xml)
