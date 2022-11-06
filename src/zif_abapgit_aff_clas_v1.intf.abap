@@ -8,6 +8,7 @@ INTERFACE zif_abapgit_aff_clas_v1 PUBLIC.
       exit_class                     TYPE ty_category VALUE '01',
       testclass_abap_unit            TYPE ty_category VALUE '05',
       behavior_class                 TYPE ty_category VALUE '06',
+      entity_event_handler           TYPE ty_category VALUE '07',
       persistent_class               TYPE ty_category VALUE '10',
       factory_for_persistent_class   TYPE ty_category VALUE '11',
       status_class_for_persist_class TYPE ty_category VALUE '12',
