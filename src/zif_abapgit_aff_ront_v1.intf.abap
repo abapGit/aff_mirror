@@ -10,13 +10,6 @@ INTERFACE zif_abapgit_aff_ront_v1
     END OF co_category.
 
   TYPES:
-    BEGIN OF ty_node_type,
-      name TYPE c LENGTH 40,
-
-      description   TYPE zif_abapgit_aff_types_v1=>ty_description_60,
-    END OF ty_node_type.
-
-  TYPES:
     BEGIN OF ty_main,
       format_version TYPE zif_abapgit_aff_types_v1=>ty_format_version,
 
@@ -24,9 +17,12 @@ INTERFACE zif_abapgit_aff_ront_v1
 
       type_category  TYPE c LENGTH 2,
 
-      root_node_type TYPE ty_node_type,
+      name           TYPE c LENGTH 30,
 
-      node_types     TYPE SORTED TABLE OF ty_node_type WITH NON-UNIQUE KEY name,
+      expanded_name  TYPE c LENGTH 512,
+
+      object_type_code  TYPE c LENGTH 5,
 
     END OF ty_main.
+
 ENDINTERFACE.
