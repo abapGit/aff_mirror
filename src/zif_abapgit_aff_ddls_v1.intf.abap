@@ -7,7 +7,7 @@ INTERFACE zif_abapgit_aff_ddls_v1
 
   CONSTANTS:
     BEGIN OF co_source_type,
-      view               TYPE ty_source_type VALUE 'V',
+      ddic_based_view    TYPE ty_source_type VALUE 'V',
       view_entity        TYPE ty_source_type VALUE 'W',
       view_extend        TYPE ty_source_type VALUE 'E',
       view_entity_extend TYPE ty_source_type VALUE 'X',
