@@ -28,7 +28,7 @@ INTERFACE zif_abapgit_aff_evtb_v1
 
       producer_version   TYPE n LENGTH 4,
 
-      bo_name            TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      bo_name            TYPE c LENGTH 30,
 
       bo_operation       TYPE c LENGTH 18,
 
