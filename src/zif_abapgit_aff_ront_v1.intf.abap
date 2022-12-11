@@ -10,18 +10,19 @@ INTERFACE zif_abapgit_aff_ront_v1
     END OF co_category.
 
   TYPES:
+
     BEGIN OF ty_main,
-      format_version TYPE zif_abapgit_aff_types_v1=>ty_format_version,
+      format_version   TYPE zif_abapgit_aff_types_v1=>ty_format_version,
 
-      header         TYPE zif_abapgit_aff_types_v1=>ty_header_60_cloud,
+      header           TYPE zif_abapgit_aff_types_v1=>ty_header_60_cloud,
 
-      type_category  TYPE c LENGTH 2,
+      type_category    TYPE c LENGTH 2,
 
-      name           TYPE c LENGTH 30,
+      name             TYPE c LENGTH 30,
 
-      expanded_name  TYPE c LENGTH 512,
+      expanded_name    TYPE c LENGTH 512,
 
-      object_type_code  TYPE c LENGTH 5,
+      object_type_code TYPE c LENGTH 5,
 
     END OF ty_main.
 
