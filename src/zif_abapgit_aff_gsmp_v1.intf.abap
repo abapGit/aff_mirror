@@ -10,6 +10,8 @@ INTERFACE zif_abapgit_aff_gsmp_v1
 
     ty_priority   TYPE i,
 
+    ty_instantiation TYPE c LENGTH 1,
+
     BEGIN OF ty_provider_implementation,
 
       type TYPE ty_provider_type,
@@ -23,6 +25,8 @@ INTERFACE zif_abapgit_aff_gsmp_v1
       mode TYPE ty_execution_mode,
 
       priority   TYPE ty_priority,
+
+      instantiation TYPE ty_instantiation,
 
       scope_dependent       TYPE abap_bool,
 
@@ -66,7 +70,15 @@ INTERFACE zif_abapgit_aff_gsmp_v1
 
       low          TYPE ty_priority VALUE 400,
 
-    END OF co_priority.
+    END OF co_priority,
+
+    BEGIN OF co_instantiation,
+
+      reuse       TYPE ty_instantiation VALUE 'R',
+
+      create_new  TYPE ty_instantiation VALUE 'C',
+
+    END OF co_instantiation.
 
   TYPES:
 
