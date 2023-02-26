@@ -65,11 +65,11 @@ INTERFACE zif_abapgit_aff_func_v1
 
   CONSTANTS:
     BEGIN OF co_release_state,
+      not_released          TYPE ty_release_state VALUE 'N',
       released              TYPE ty_release_state VALUE 'E',
       released_sap_internal TYPE ty_release_state VALUE 'I',
       obsolete              TYPE ty_release_state VALUE 'O',
       release_planned       TYPE ty_release_state VALUE 'M',
-      not_released          TYPE ty_release_state VALUE 'N',
     END OF co_release_state.
 
   TYPES:

@@ -5,11 +5,11 @@ INTERFACE zif_abapgit_aff_fugr_v1
 
   CONSTANTS:
     BEGIN OF co_status,
+      not_classified   TYPE ty_status VALUE space,
       sap_program      TYPE ty_status VALUE 'P',
       customer_program TYPE ty_status VALUE 'K',
       system_program   TYPE ty_status VALUE 'S',
       test_program     TYPE ty_status VALUE 'T',
-      not_classified   TYPE ty_status VALUE space,
     END OF co_status.
 
   TYPES:

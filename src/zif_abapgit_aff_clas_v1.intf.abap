@@ -13,6 +13,7 @@ INTERFACE zif_abapgit_aff_clas_v1 PUBLIC.
       factory_for_persistent_class   TYPE ty_category VALUE '11',
       status_class_for_persist_class TYPE ty_category VALUE '12',
       rfc_proxy_class                TYPE ty_category VALUE '35',
+      communication_connection_class TYPE ty_category VALUE '36',
       exception_class                TYPE ty_category VALUE '40',
       area_class_shared_objects      TYPE ty_category VALUE '45',
       business_class                 TYPE ty_category VALUE '50',
