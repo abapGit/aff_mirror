@@ -11,8 +11,8 @@ INTERFACE zif_abapgit_aff_enho_v1
 
   CONSTANTS:
     BEGIN OF co_customizing,
-      supported              TYPE ty_customizing VALUE ' ',
       not_supported              TYPE ty_customizing VALUE 'X',
+      supported              TYPE ty_customizing VALUE ' ',
       supported_no_transport              TYPE ty_customizing VALUE 'D',
     END OF co_customizing.
 

@@ -32,7 +32,11 @@ INTERFACE zif_abapgit_aff_smbc_v1
       enabled  TYPE string VALUE 'Enabled',
       disabled TYPE string VALUE 'Disabled',
       auto     TYPE string VALUE 'Auto',
-    END OF co_initial_load.
+    END OF co_initial_load,
+    BEGIN OF co_row_count_mode,
+      fixed TYPE string VALUE 'Fixed',
+      auto TYPE string VALUE 'Auto',
+    END OF co_row_count_mode.
 
   TYPES:
     BEGIN OF ty_personalization,
@@ -59,6 +63,8 @@ INTERFACE zif_abapgit_aff_smbc_v1
       entity_set             TYPE string,
       table_type             TYPE ty_table_type,
       selection_mode         TYPE string,
+      row_count_mode TYPE string,
+      row_count TYPE i,
       creation_mode_name     TYPE ty_creation_mode-name,
       create_at_end          TYPE ty_creation_mode-create_at_end,
       hide_filter            TYPE ty_personalization-hide_filter,
@@ -67,6 +73,7 @@ INTERFACE zif_abapgit_aff_smbc_v1
       condensed_table_layout TYPE abap_bool,
       disable_paste          TYPE abap_bool,
       enable_full_screen     TYPE abap_bool,
+      enable_mass_edit TYPE abap_bool,
     END OF ty_table_setting,
     ty_object_pages   TYPE SORTED TABLE OF ty_object_page WITH UNIQUE KEY entity_set,
     ty_table_settings TYPE SORTED TABLE OF ty_table_setting WITH UNIQUE KEY entity_set,
