@@ -30,7 +30,7 @@ INTERFACE zif_abapgit_aff_evtb_v1
 
       bo_name            TYPE c LENGTH 30,
 
-      bo_operation       TYPE c LENGTH 18,
+      bo_operation       TYPE c LENGTH 30,
 
       producer_type      TYPE c LENGTH 83,
 
