@@ -44,10 +44,15 @@ INTERFACE zif_abapgit_aff_sajt_v1
     END OF ty_parameters.
 
   TYPES:
+    BEGIN OF ty_general_information,
+      catalog_name TYPE ty_catalog_name,
+    END OF ty_general_information.
+
+  TYPES:
     BEGIN OF ty_main,
-      format_version TYPE zif_abapgit_aff_types_v1=>ty_format_version,
-      header         TYPE ty_header,
-      catalog_name   TYPE ty_catalog_name,
-      parameters     TYPE ty_parameters,
+      format_version      TYPE zif_abapgit_aff_types_v1=>ty_format_version,
+      header              TYPE ty_header,
+      general_information TYPE ty_general_information,
+      parameters          TYPE ty_parameters,
     END OF ty_main.
 ENDINTERFACE.
