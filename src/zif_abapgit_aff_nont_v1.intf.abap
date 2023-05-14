@@ -10,8 +10,6 @@ INTERFACE zif_abapgit_aff_nont_v1
 
       name            TYPE c LENGTH 30,
 
-      expanded_name   TYPE c LENGTH 512,
-
       sap_object_type TYPE c LENGTH 30,
 
       root_node_flag  TYPE abap_bool,

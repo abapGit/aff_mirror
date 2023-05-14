@@ -21,8 +21,6 @@ INTERFACE zif_abapgit_aff_ront_v1
 
       name             TYPE c LENGTH 30,
 
-      expanded_name    TYPE c LENGTH 512,
-
       object_type_code TYPE c LENGTH 5,
 
     END OF ty_main.
