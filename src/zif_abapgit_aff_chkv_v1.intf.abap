@@ -14,7 +14,7 @@ INTERFACE zif_abapgit_aff_chkv_v1
     ty_param_value TYPE string,
 
     BEGIN OF ty_parameter,
-      name             TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      name             TYPE string,
       value            TYPE string,
       value_list       TYPE STANDARD TABLE OF ty_param_value WITH DEFAULT KEY,
       value_range_list TYPE ty_ranges,
