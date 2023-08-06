@@ -11,17 +11,56 @@ INTERFACE zif_abapgit_aff_sajc_v1
   TYPES ty_program_name TYPE c LENGTH 40.
 
   TYPES:
-    BEGIN OF ty_exit_classes,
-      check        TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      value_help   TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      notification TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-    END OF ty_exit_classes.
-
-  TYPES:
     BEGIN OF ty_general_information,
       class_name   TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
       program_name TYPE ty_program_name,
     END OF ty_general_information.
+
+  TYPES:
+    BEGIN OF ty_exit_classes,
+      check        TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      value_help   TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      notification TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      delete       TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+    END OF ty_exit_classes.
+
+  TYPES ty_parameter_name TYPE c LENGTH 38.
+  TYPES ty_group_name TYPE c LENGTH 10.
+  TYPES ty_section_name TYPE c LENGTH 10.
+  TYPES ty_title_text TYPE c LENGTH 120.
+
+  TYPES:
+    BEGIN OF ty_parameter,
+      name                 TYPE ty_parameter_name,
+      group                TYPE ty_group_name,
+      indented             TYPE abap_bool,
+      mandatory            TYPE abap_bool,
+      hidden               TYPE abap_bool,
+      read_only            TYPE abap_bool,
+      enabled_by_parameter TYPE ty_parameter_name,
+      backend_call         TYPE abap_bool,
+      single_values        TYPE abap_bool,
+      text_editor_lines    TYPE i,
+    END OF ty_parameter.
+  TYPES:
+    ty_parameter_table TYPE STANDARD TABLE OF ty_parameter WITH KEY name.
+
+  TYPES:
+    BEGIN OF ty_group,
+      name     TYPE ty_group_name,
+      title    TYPE ty_title_text,
+      section  TYPE ty_section_name,
+    END OF ty_group.
+  TYPES:
+    ty_group_table TYPE STANDARD TABLE OF ty_group WITH KEY name.
+
+  TYPES:
+    BEGIN OF ty_section,
+      name     TYPE ty_section_name,
+      title    TYPE ty_title_text,
+    END OF ty_section.
+  TYPES:
+    ty_section_table TYPE STANDARD TABLE OF ty_section WITH KEY name.
 
   TYPES:
     BEGIN OF ty_main,
@@ -29,5 +68,8 @@ INTERFACE zif_abapgit_aff_sajc_v1
       header              TYPE ty_header,
       general_information TYPE ty_general_information,
       exit_classes        TYPE ty_exit_classes,
+      sections            TYPE ty_section_table,
+      groups              TYPE ty_group_table,
+      parameters          TYPE ty_parameter_table,
     END OF ty_main.
 ENDINTERFACE.
