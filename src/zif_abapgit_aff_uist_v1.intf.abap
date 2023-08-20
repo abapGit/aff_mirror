@@ -5,7 +5,7 @@ INTERFACE zif_abapgit_aff_uist_v1
     BEGIN OF ty_general_information,
       title         TYPE zif_abapgit_aff_types_v1=>ty_description_100,
       sort_priority TYPE p LENGTH 7 DECIMALS 3,
-      base_space_template_name       TYPE c LENGTH 35,
+      merge_id      TYPE c LENGTH 35,
     END OF ty_general_information.
 
   TYPES:
