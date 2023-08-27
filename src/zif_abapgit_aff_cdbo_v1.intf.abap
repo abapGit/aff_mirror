@@ -5,7 +5,7 @@ INTERFACE zif_abapgit_aff_cdbo_v1
   CONSTANTS:
     BEGIN OF co_object_type,
       tabl    TYPE ty_object_type VALUE '01',
-      ddls TYPE ty_object_type VALUE '03',
+      ddls TYPE ty_object_type VALUE '02',
     END OF co_object_type.
 
   TYPES ty_field_nature TYPE c LENGTH 2.
