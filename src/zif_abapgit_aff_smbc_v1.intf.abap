@@ -27,6 +27,7 @@ INTERFACE zif_abapgit_aff_smbc_v1
       new_page     TYPE string VALUE 'NewPage',
       inline       TYPE string VALUE 'Inline',
       creation_row TYPE string VALUE 'CreationRow',
+      inline_creation_rows TYPE string VALUE 'InlineCreationRows',
     END OF co_creation_mode_name,
     BEGIN OF co_initial_load,
       enabled  TYPE string VALUE 'Enabled',
