@@ -8,6 +8,7 @@ INTERFACE zif_abapgit_aff_ront_v1
       analytical_object    TYPE c LENGTH 2 VALUE `AO`,
       configuration_object TYPE c LENGTH 2 VALUE `CO`,
       dependent_object TYPE c LENGTH 2 VALUE `DO`,
+      hierarchy_object TYPE c LENGTH 2 VALUE `HO`,
     END OF co_category.
 
   TYPES:
