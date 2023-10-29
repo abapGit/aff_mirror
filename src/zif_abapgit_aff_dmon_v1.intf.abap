@@ -36,7 +36,6 @@ INTERFACE zif_abapgit_aff_dmon_v1
     END OF co_daemon_type.
 
   TYPES:
-
     BEGIN OF ty_main,
       format_version TYPE zif_abapgit_aff_types_v1=>ty_format_version,
       header         TYPE zif_abapgit_aff_types_v1=>ty_header_60_cloud,
