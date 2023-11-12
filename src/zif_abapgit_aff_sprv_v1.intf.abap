@@ -4,13 +4,14 @@ INTERFACE zif_abapgit_aff_sprv_v1
 
   TYPES:
     BEGIN OF ty_servprovider,
-      name   TYPE c LENGTH 30,
-      prefix TYPE c LENGTH 10,
+      provider_name TYPE c LENGTH 30,
+      namespace TYPE c LENGTH 30,
+      prefix  TYPE c LENGTH 10,
     END OF ty_servprovider.
   TYPES:
     BEGIN OF ty_main,
-      format_version   TYPE zif_abapgit_aff_types_v1=>ty_format_version,
-      header           TYPE zif_abapgit_aff_types_v1=>ty_header_60_cloud,
+      format_version TYPE zif_abapgit_aff_types_v1=>ty_format_version,
+      header TYPE zif_abapgit_aff_types_v1=>ty_header_60_cloud,
       service_provider TYPE ty_servprovider,
     END OF ty_main.
 ENDINTERFACE.
