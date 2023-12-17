@@ -40,8 +40,8 @@ INTERFACE zif_abapgit_aff_scp1_v1
 
   CONSTANTS:
     BEGIN OF co_operation_at_activation,
-      insert_or_update TYPE ty_operation_at_activation VALUE '',
-      delete           TYPE ty_operation_at_activation VALUE 'L',
+      modify TYPE ty_operation_at_activation VALUE '',
+      delete TYPE ty_operation_at_activation VALUE 'L',
     END OF co_operation_at_activation.
 
   TYPES ty_field_attribute_value TYPE c LENGTH 3.
