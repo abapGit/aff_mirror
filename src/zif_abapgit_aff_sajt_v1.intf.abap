@@ -23,7 +23,7 @@ INTERFACE zif_abapgit_aff_sajt_v1
 
   TYPES:
     BEGIN OF ty_single_value_parameter,
-      name  TYPE  c LENGTH 8,
+      name  TYPE  c LENGTH 38,
       value TYPE  c LENGTH 255,
     END OF ty_single_value_parameter.
   TYPES:
@@ -31,7 +31,7 @@ INTERFACE zif_abapgit_aff_sajt_v1
 
   TYPES:
     BEGIN OF ty_value_ranges_parameter,
-      name         TYPE  c LENGTH 8,
+      name         TYPE  c LENGTH 38,
       value_ranges TYPE ty_value_ranges_table,
     END OF ty_value_ranges_parameter.
   TYPES:
