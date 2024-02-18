@@ -4,9 +4,9 @@ INTERFACE zif_abapgit_aff_uipg_v1
   TYPES:
     BEGIN OF ty_general_information,
 
-      title       TYPE zif_abapgit_aff_types_v1=>ty_description_100,
+      title    TYPE zif_abapgit_aff_types_v1=>ty_description_100,
 
-      merge_id    TYPE c LENGTH 35,
+      merge_id TYPE c LENGTH 35,
 
     END OF ty_general_information.
 
@@ -50,36 +50,57 @@ INTERFACE zif_abapgit_aff_uipg_v1
 
       tile_key            TYPE ty_catalog_item_key,
 
-      tile_display_format TYPE ty_tile_display_format,
-
       target_mapping_key  TYPE ty_catalog_item_key,
 
     END OF ty_tile_assignment.
 
 
-  TYPES ty_item_type TYPE c LENGTH 2.
+  TYPES ty_ladi_id      TYPE c LENGTH 32.
 
 
-  CONSTANTS:
-    BEGIN OF co_item_type,
-
-      tile_assignment TYPE ty_item_type VALUE 'TI',
-
-    END OF co_item_type.
+  TYPES ty_ladi_tile_id TYPE c LENGTH 50.
 
 
   TYPES:
-    BEGIN OF ty_item,
+    BEGIN OF ty_ladi_assignment,
+
+      ladi_id             TYPE ty_ladi_id,
+
+      tile_id             TYPE ty_ladi_tile_id,
+
+    END OF ty_ladi_assignment.
+
+
+  TYPES ty_visualization_type TYPE c LENGTH 2.
+
+
+  CONSTANTS:
+    BEGIN OF co_visualization_type,
+
+      ladi_assignment TYPE ty_visualization_type VALUE 'AD',
+
+      tile_assignment TYPE ty_visualization_type VALUE 'TI',
+
+    END OF co_visualization_type.
+
+
+  TYPES:
+    BEGIN OF ty_visualization,
 
       id              TYPE c LENGTH 35,
 
-      type            TYPE ty_item_type,
+      type            TYPE ty_visualization_type,
+
+      display_format TYPE ty_tile_display_format,
 
       tile_assignment TYPE ty_tile_assignment,
 
-    END OF ty_item,
+      ladi_assignment TYPE ty_ladi_assignment,
 
-    ty_items TYPE STANDARD TABLE OF ty_item WITH DEFAULT KEY.
+    END OF ty_visualization,
+
+
+    ty_visualizations TYPE STANDARD TABLE OF ty_visualization WITH DEFAULT KEY.
 
 
   TYPES:
@@ -89,7 +110,7 @@ INTERFACE zif_abapgit_aff_uipg_v1
 
       title TYPE c LENGTH 100,
 
-      items TYPE ty_items,
+      visualizations TYPE ty_visualizations,
 
     END OF ty_section,
 
