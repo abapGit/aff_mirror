@@ -31,7 +31,7 @@ INTERFACE zif_abapgit_aff_susi_v1
       application_name TYPE ty_appl_name,
       application_type TYPE ty_type,
       maintenance_mode TYPE ty_maintenance_mode,
-      description      TYPE string,
+      documentation    TYPE string,
     END OF ty_general_information.
 
   TYPES:
@@ -52,7 +52,7 @@ INTERFACE zif_abapgit_aff_susi_v1
     BEGIN OF ty_authorization_object,
       object             TYPE c LENGTH 10,
       maintenance_status TYPE ty_maintenance_status,
-      description        TYPE string,
+      documentation      TYPE string,
       fields             TYPE ty_authorization_fields,
     END OF ty_authorization_object.
 
