@@ -5,16 +5,23 @@ INTERFACE zif_abapgit_aff_cota_v1
 
   CONSTANTS:
     BEGIN OF co_comm_type,
-      rfc  TYPE ty_comm_type VALUE 'R',
       http TYPE ty_comm_type VALUE 'H',
     END OF co_comm_type.
+
+  TYPES ty_multi_type TYPE c LENGTH 30.
+
+  CONSTANTS:
+    BEGIN OF co_multi_type,
+      cross_client       TYPE ty_multi_type VALUE 'C',
+      client_specific TYPE ty_multi_type VALUE 'D',
+    END OF co_multi_type.
 
   TYPES:
     BEGIN OF ty_configuration,
       communication_type          TYPE ty_comm_type,
-      communication_target_class     TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      communication_target_class  TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      multitenancy_mode           TYPE ty_multi_type,
       allow_multiple_destinations TYPE abap_bool,
-      client_independent          TYPE abap_bool,
     END OF ty_configuration.
 
   TYPES ty_comp_mode TYPE c LENGTH 1.
@@ -27,7 +34,7 @@ INTERFACE zif_abapgit_aff_cota_v1
 
   TYPES:
     BEGIN OF ty_rfc_settings,
-      enforce_sap_gui_support        TYPE abap_bool,
+      enforce_sap_gui_support    TYPE abap_bool,
       enforce_fast_serialization TYPE abap_bool,
       default_compression_mode   TYPE ty_comp_mode,
     END OF ty_rfc_settings.
