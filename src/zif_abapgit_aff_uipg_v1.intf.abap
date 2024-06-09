@@ -48,9 +48,9 @@ INTERFACE zif_abapgit_aff_uipg_v1
   TYPES:
     BEGIN OF ty_tile_assignment,
 
-      tile_key            TYPE ty_catalog_item_key,
+      tile_key           TYPE ty_catalog_item_key,
 
-      target_mapping_key  TYPE ty_catalog_item_key,
+      target_mapping_key TYPE ty_catalog_item_key,
 
     END OF ty_tile_assignment.
 
@@ -64,9 +64,9 @@ INTERFACE zif_abapgit_aff_uipg_v1
   TYPES:
     BEGIN OF ty_ladi_assignment,
 
-      ladi_id             TYPE ty_ladi_id,
+      ladi_id TYPE ty_ladi_id,
 
-      tile_id             TYPE ty_ladi_tile_id,
+      tile_id TYPE ty_ladi_tile_id,
 
     END OF ty_ladi_assignment.
 
@@ -91,7 +91,7 @@ INTERFACE zif_abapgit_aff_uipg_v1
 
       type            TYPE ty_visualization_type,
 
-      display_format TYPE ty_tile_display_format,
+      display_format  TYPE ty_tile_display_format,
 
       tile_assignment TYPE ty_tile_assignment,
 
@@ -106,9 +106,9 @@ INTERFACE zif_abapgit_aff_uipg_v1
   TYPES:
     BEGIN OF ty_section,
 
-      id    TYPE c LENGTH 35,
+      id             TYPE c LENGTH 35,
 
-      title TYPE c LENGTH 100,
+      title          TYPE c LENGTH 100,
 
       visualizations TYPE ty_visualizations,
 

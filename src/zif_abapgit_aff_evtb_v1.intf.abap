@@ -3,15 +3,15 @@ INTERFACE zif_abapgit_aff_evtb_v1
 
   TYPES:
     BEGIN OF ty_event,
-      event_version             TYPE n LENGTH 4,
+      event_version       TYPE n LENGTH 4,
 
-      event_minor_version       TYPE i,
+      event_minor_version TYPE i,
 
-      event_patch_version       TYPE i,
+      event_patch_version TYPE i,
 
-      entity_name               TYPE c LENGTH 30,
+      entity_name         TYPE c LENGTH 30,
 
-      entity_event_name         TYPE c LENGTH 30,
+      entity_event_name   TYPE c LENGTH 30,
     END OF ty_event.
 
   TYPES:

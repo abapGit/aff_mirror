@@ -19,7 +19,7 @@ INTERFACE zif_abapgit_aff_cdbo_v1
 
   TYPES:
     BEGIN OF ty_field,
-      name TYPE c LENGTH 30,
+      name   TYPE c LENGTH 30,
       nature TYPE ty_field_nature,
     END OF ty_field.
 
@@ -28,16 +28,16 @@ INTERFACE zif_abapgit_aff_cdbo_v1
 
   TYPES:
     BEGIN OF ty_general_information,
-      object_type   TYPE ty_object_type,
-      object_name  TYPE c LENGTH 40,
+      object_type TYPE ty_object_type,
+      object_name TYPE c LENGTH 40,
     END OF ty_general_information.
 
   TYPES:
     BEGIN OF ty_main,
-      format_version TYPE zif_abapgit_aff_types_v1=>ty_format_version,
-      header         TYPE zif_abapgit_aff_types_v1=>ty_header_60,
+      format_version      TYPE zif_abapgit_aff_types_v1=>ty_format_version,
+      header              TYPE zif_abapgit_aff_types_v1=>ty_header_60,
       general_information TYPE ty_general_information,
-      fields     TYPE ty_fields,
+      fields              TYPE ty_fields,
     END OF ty_main.
 
 ENDINTERFACE.

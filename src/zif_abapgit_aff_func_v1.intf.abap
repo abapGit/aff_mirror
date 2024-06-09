@@ -43,8 +43,8 @@ INTERFACE zif_abapgit_aff_func_v1
   TYPES:
     BEGIN OF ty_rfc_properties,
       basxml_enabled TYPE abap_bool,
-      rfc_scope       TYPE ty_rfc_scope,
-      rfc_version        TYPE ty_rfc_version,
+      rfc_scope      TYPE ty_rfc_scope,
+      rfc_version    TYPE ty_rfc_version,
       abap_from_java TYPE abap_bool,
       java_from_abap TYPE abap_bool,
       java_remote    TYPE abap_bool,

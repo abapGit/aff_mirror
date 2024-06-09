@@ -9,13 +9,13 @@ INTERFACE zif_abapgit_aff_ntty_v1
 
     BEGIN OF ty_general_information,
       language_dependent TYPE abap_bool,
-      multiple_notes            TYPE abap_bool,
-      hide_title          TYPE abap_bool,
+      multiple_notes     TYPE abap_bool,
+      hide_title         TYPE abap_bool,
     END OF ty_general_information,
 
     BEGIN OF ty_content_settings,
-      maximum_length TYPE ty_max_length,
-      formatting_profile    TYPE ty_profile,
+      maximum_length     TYPE ty_max_length,
+      formatting_profile TYPE ty_profile,
     END OF ty_content_settings,
 
     BEGIN OF ty_main,

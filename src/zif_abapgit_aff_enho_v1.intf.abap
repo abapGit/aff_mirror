@@ -99,7 +99,7 @@ INTERFACE zif_abapgit_aff_enho_v1
       is_example_implementation TYPE abap_bool,
       is_default_implementation TYPE abap_bool,
       is_active_implementation  TYPE abap_bool,
-      customizing  TYPE ty_customizing,
+      customizing               TYPE ty_customizing,
       filter_values             TYPE ty_or_combination_of_and,
     END OF ty_badi_impl,
 

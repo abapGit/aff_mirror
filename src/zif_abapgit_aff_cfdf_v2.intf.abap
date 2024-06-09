@@ -151,13 +151,13 @@ INTERFACE zif_abapgit_aff_cfdf_v2
     END OF ty_gs_characteristic_reference.
   TYPES:
     BEGIN OF ty_main,
-      format_version               TYPE zif_abapgit_aff_types_v1=>ty_format_version,
+      format_version              TYPE zif_abapgit_aff_types_v1=>ty_format_version,
 
-      header                       TYPE zif_abapgit_aff_types_v1=>ty_header_60_no_abap_lv,
+      header                      TYPE zif_abapgit_aff_types_v1=>ty_header_60_no_abap_lv,
 
-      external_name                TYPE ty_field_name,
+      external_name               TYPE ty_field_name,
 
-      type                         TYPE ty_type,
+      type                        TYPE ty_type,
 
       BEGIN OF type_details,
         length                     TYPE i,
@@ -175,31 +175,31 @@ INTERFACE zif_abapgit_aff_cfdf_v2
         dimension_view             TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
       END OF type_details,
 
-      data_protection_and_privacy  TYPE ty_gs_dpp_properties,
+      data_protection_and_privacy TYPE ty_gs_dpp_properties,
 
-      characteristic_reference     TYPE ty_gs_characteristic_reference,
+      characteristic_reference    TYPE ty_gs_characteristic_reference,
 
-      ui_texts                     TYPE ty_gt_ui_text,
+      ui_texts                    TYPE ty_gt_ui_text,
 
-      code_list_values             TYPE ty_gt_code_list_value,
+      code_list_values            TYPE ty_gt_code_list_value,
 
-      code_list_descriptions       TYPE ty_gt_code_list_value_descr,
+      code_list_descriptions      TYPE ty_gt_code_list_value_descr,
 
-      extended_business_contexts   TYPE ty_gt_extended_bus_context,
+      extended_business_contexts  TYPE ty_gt_extended_bus_context,
 
-      extended_cds_views           TYPE ty_gt_extended_cds_view,
+      extended_cds_views          TYPE ty_gt_extended_cds_view,
 
-      extended_odata_services      TYPE ty_gt_extended_odata_service,
+      extended_odata_services     TYPE ty_gt_extended_odata_service,
 
-      extended_business_scenarios  TYPE ty_gt_extended_bus_scenario,
+      extended_business_scenarios TYPE ty_gt_extended_bus_scenario,
 
-      extended_dynpro_contexts     TYPE ty_gt_extended_dynpro_context,
+      extended_dynpro_contexts    TYPE ty_gt_extended_dynpro_context,
 
-      extended_soap_services       TYPE ty_gt_extended_soap_service,
+      extended_soap_services      TYPE ty_gt_extended_soap_service,
 
-      value_help_key_mappings      TYPE ty_gt_value_help_key_mapping,
+      value_help_key_mappings     TYPE ty_gt_value_help_key_mapping,
 
-      value_help_bindings          TYPE ty_gt_value_help_binding,
+      value_help_bindings         TYPE ty_gt_value_help_binding,
     END OF ty_main.
 
   CONSTANTS:
