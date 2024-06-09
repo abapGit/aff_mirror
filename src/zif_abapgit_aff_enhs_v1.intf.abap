@@ -68,18 +68,18 @@ INTERFACE zif_abapgit_aff_enhs_v1
 
   TYPES:
     BEGIN OF ty_badi_def,
-      name               TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      description        TYPE c LENGTH 255,
-      interface          TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      instantiation      TYPE ty_instantiation,
-      multiple_use       TYPE abap_bool,
-      sap_internal       TYPE abap_bool,
-      example_classes    TYPE ty_example_classes,
-      fallback_class     TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      filter_limitation  TYPE abap_bool,
-      documentation_id   TYPE c LENGTH 60,
-      amdp               TYPE abap_bool,
-      filters            TYPE ty_badi_def_filters,
+      name              TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      description       TYPE c LENGTH 255,
+      interface         TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      instantiation     TYPE ty_instantiation,
+      multiple_use      TYPE abap_bool,
+      sap_internal      TYPE abap_bool,
+      example_classes   TYPE ty_example_classes,
+      fallback_class    TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      filter_limitation TYPE abap_bool,
+      documentation_id  TYPE c LENGTH 60,
+      amdp              TYPE abap_bool,
+      filters           TYPE ty_badi_def_filters,
     END OF ty_badi_def.
 
   TYPES ty_badi_defs TYPE STANDARD TABLE OF ty_badi_def WITH DEFAULT KEY.

@@ -9,9 +9,9 @@ INTERFACE zif_abapgit_aff_srvb_v1
     END OF co_bind_type_category.
   TYPES:
     BEGIN OF ty_service_content,
-      service_version         TYPE c LENGTH 24,
-      service_build_version   TYPE n LENGTH 10,
-      service_definition TYPE c LENGTH 30,
+      service_version       TYPE c LENGTH 24,
+      service_build_version TYPE n LENGTH 10,
+      service_definition    TYPE c LENGTH 30,
     END OF ty_service_content.
   TYPES: ty_service_contents TYPE TABLE OF ty_service_content WITH DEFAULT KEY.
   TYPES:
@@ -22,11 +22,11 @@ INTERFACE zif_abapgit_aff_srvb_v1
   TYPES: ty_services TYPE TABLE OF  ty_service WITH DEFAULT KEY.
   TYPES:
     BEGIN OF ty_main,
-      format_version     TYPE zif_abapgit_aff_types_v1=>ty_format_version,
-      header             TYPE zif_abapgit_aff_types_v1=>ty_header_60,
+      format_version        TYPE zif_abapgit_aff_types_v1=>ty_format_version,
+      header                TYPE zif_abapgit_aff_types_v1=>ty_header_60,
       binding_type          TYPE c LENGTH 30,
       binding_type_category TYPE ty_bind_type_category,
-      services           TYPE ty_services,
+      services              TYPE ty_services,
     END OF ty_main.
 
 ENDINTERFACE.

@@ -3,13 +3,13 @@ INTERFACE zif_abapgit_aff_ilmb_v1
 
   TYPES:
     BEGIN OF ty_cond_field,
-      condition_field   TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      description    TYPE zif_abapgit_aff_types_v1=>ty_description_60,
-      data_element   TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      source_table   TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      source_field   TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      indirect_value TYPE abap_bool,
-      no_intervals   TYPE abap_bool,
+      condition_field TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      description     TYPE zif_abapgit_aff_types_v1=>ty_description_60,
+      data_element    TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      source_table    TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      source_field    TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      indirect_value  TYPE abap_bool,
+      no_intervals    TYPE abap_bool,
     END OF ty_cond_field,
     ty_cond_fields TYPE SORTED TABLE OF ty_cond_field WITH UNIQUE KEY condition_field source_table source_field.
 

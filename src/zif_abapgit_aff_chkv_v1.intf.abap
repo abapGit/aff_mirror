@@ -33,10 +33,10 @@ INTERFACE zif_abapgit_aff_chkv_v1
 
   TYPES:
     BEGIN OF ty_main,
-      format_version     TYPE zif_abapgit_aff_types_v1=>ty_format_version,
-      header             TYPE zif_abapgit_aff_types_v1=>ty_header_60_cloud,
-      remote_enabled     TYPE abap_bool,
-      selected_checks    TYPE ty_checks,
+      format_version  TYPE zif_abapgit_aff_types_v1=>ty_format_version,
+      header          TYPE zif_abapgit_aff_types_v1=>ty_header_60_cloud,
+      remote_enabled  TYPE abap_bool,
+      selected_checks TYPE ty_checks,
     END OF ty_main.
 
 ENDINTERFACE.

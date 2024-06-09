@@ -41,8 +41,8 @@ INTERFACE zif_abapgit_aff_susi_v1
   TYPES:
     BEGIN OF ty_authorization_field,
       field TYPE ty_field,
-      low    TYPE ty_val,
-      high   TYPE ty_val,
+      low   TYPE ty_val,
+      high  TYPE ty_val,
     END OF ty_authorization_field.
 
   TYPES:

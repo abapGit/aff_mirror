@@ -3,9 +3,9 @@ INTERFACE zif_abapgit_aff_aobj_v1
 
   TYPES:
     BEGIN OF ty_attributes,
-      write_class  TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      delete_class TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      reload_class TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      write_class   TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      delete_class  TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      reload_class  TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
       storage_class TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
     END OF ty_attributes.
 

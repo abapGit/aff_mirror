@@ -3,9 +3,9 @@ INTERFACE zif_abapgit_aff_chko_v1
 
   TYPES:
     BEGIN OF ty_parameter,
-      name         TYPE string,
-      description  TYPE c LENGTH 255,
-      hidden       TYPE abap_bool,
+      name        TYPE string,
+      description TYPE c LENGTH 255,
+      hidden      TYPE abap_bool,
     END OF ty_parameter.
 
   TYPES:
@@ -19,7 +19,7 @@ INTERFACE zif_abapgit_aff_chko_v1
       header             TYPE zif_abapgit_aff_types_v1=>ty_header_60_cloud,
       category           TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
       implementing_class TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      check_type     TYPE ty_check_type,
+      check_type         TYPE ty_check_type,
       parameters         TYPE ty_parameters,
     END OF ty_main.
 

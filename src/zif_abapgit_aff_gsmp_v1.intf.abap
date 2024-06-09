@@ -22,19 +22,19 @@ INTERFACE zif_abapgit_aff_gsmp_v1
 
     BEGIN OF ty_provider_execution,
 
-      mode TYPE ty_execution_mode,
+      mode            TYPE ty_execution_mode,
 
-      priority   TYPE ty_priority,
+      priority        TYPE ty_priority,
 
-      instantiation TYPE ty_instantiation,
+      instantiation   TYPE ty_instantiation,
 
-      scope_dependent       TYPE abap_bool,
+      scope_dependent TYPE abap_bool,
 
     END OF ty_provider_execution,
 
     BEGIN OF ty_model,
 
-      data     TYPE string,
+      data TYPE string,
 
     END OF ty_model.
 
@@ -90,9 +90,9 @@ INTERFACE zif_abapgit_aff_gsmp_v1
 
       implementation TYPE ty_provider_implementation,
 
-      execution TYPE ty_provider_execution,
+      execution      TYPE ty_provider_execution,
 
-      model     TYPE ty_model,
+      model          TYPE ty_model,
 
     END OF ty_main.
 

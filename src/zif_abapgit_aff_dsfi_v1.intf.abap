@@ -11,8 +11,8 @@ INTERFACE zif_abapgit_aff_dsfi_v1
 
   TYPES:
     BEGIN OF ty_main,
-      format_version TYPE zif_abapgit_aff_types_v1=>ty_format_version,
-      header         TYPE zif_abapgit_aff_types_v1=>ty_header_60_src,
+      format_version       TYPE zif_abapgit_aff_types_v1=>ty_format_version,
+      header               TYPE zif_abapgit_aff_types_v1=>ty_header_60_src,
       scalar_function_name TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
       engine               TYPE ty_engine,
     END OF ty_main.
