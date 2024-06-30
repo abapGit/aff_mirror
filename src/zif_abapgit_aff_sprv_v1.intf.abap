@@ -4,9 +4,10 @@ INTERFACE zif_abapgit_aff_sprv_v1
 
   TYPES:
     BEGIN OF ty_servprovider,
-      provider_name TYPE c LENGTH 30,
-      namespace     TYPE c LENGTH 255,
-      prefix        TYPE c LENGTH 10,
+      provider_name      TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      namespace          TYPE c LENGTH 255,
+      prefix             TYPE c LENGTH 10,
+      implementing_class TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
     END OF ty_servprovider.
   TYPES:
     BEGIN OF ty_main,
