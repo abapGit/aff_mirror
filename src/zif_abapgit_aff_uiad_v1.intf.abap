@@ -245,6 +245,8 @@ INTERFACE zif_abapgit_aff_uiad_v1
   TYPES:
     BEGIN OF ty_chip_bag_property,
 
+      bag_id       TYPE c LENGTH 100,
+
       name         TYPE c LENGTH 100,
 
       value        TYPE string,
@@ -256,24 +258,13 @@ INTERFACE zif_abapgit_aff_uiad_v1
     ty_chip_bag_properties TYPE STANDARD TABLE OF ty_chip_bag_property WITH DEFAULT KEY.
 
   TYPES:
-    BEGIN OF ty_chip_bag,
-
-      id         TYPE c LENGTH 100,
-
-      properties TYPE ty_chip_bag_properties,
-
-    END OF ty_chip_bag,
-
-    ty_chip_bags TYPE STANDARD TABLE OF ty_chip_bag WITH DEFAULT KEY.
-
-  TYPES:
     BEGIN OF ty_custom_tile_details,
 
-      base_chip_id  TYPE c LENGTH 255,
+      base_chip_id   TYPE c LENGTH 255,
 
-      configuration TYPE string,
+      configuration  TYPE string,
 
-      bags          TYPE ty_chip_bags,
+      bag_properties TYPE ty_chip_bag_properties,
 
     END OF ty_custom_tile_details.
 
