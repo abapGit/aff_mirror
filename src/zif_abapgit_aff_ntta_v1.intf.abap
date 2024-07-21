@@ -5,8 +5,7 @@ INTERFACE zif_abapgit_aff_ntta_v1
     ty_notetype TYPE c LENGTH 20,
 
     BEGIN OF ty_general_information,
-      object_node_type    TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      implementation_exit TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      object_node_type TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
     END OF ty_general_information,
 
     BEGIN OF ty_notetype_structure,
