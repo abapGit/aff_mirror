@@ -3,8 +3,8 @@ INTERFACE zif_abapgit_aff_dcat_v1
 
   CONSTANTS:
     BEGIN OF co_categ_senst_lvl,
-      sensitive_personal_data TYPE c LENGTH 1 VALUE 'S',
       personal_data           TYPE c LENGTH 1 VALUE '',
+      sensitive_personal_data TYPE c LENGTH 1 VALUE 'S',
     END OF co_categ_senst_lvl.
 
   TYPES:
@@ -18,5 +18,6 @@ INTERFACE zif_abapgit_aff_dcat_v1
       header         TYPE zif_abapgit_aff_types_v1=>ty_header_60,
       attributes     TYPE ty_attributes,
     END OF ty_main.
+
 
 ENDINTERFACE.
