@@ -287,14 +287,28 @@ INTERFACE zif_abapgit_aff_uiad_v1
 
     ty_tiles TYPE STANDARD TABLE OF ty_tile WITH DEFAULT KEY.
 
+  TYPES ty_life_cycle_status TYPE c LENGTH 1.
+
+  CONSTANTS:
+    BEGIN OF co_life_cycle_status,
+
+      active     TYPE ty_life_cycle_status VALUE ' ',
+
+      deprecated TYPE ty_life_cycle_status VALUE 'D',
+
+      obsolete   TYPE ty_life_cycle_status VALUE 'O',
+
+    END OF co_life_cycle_status.
+
+
   TYPES:
-    BEGIN OF ty_lifecycle,
+    BEGIN OF ty_life_cycle,
 
-      deprecated TYPE abap_bool,
+      status    TYPE ty_life_cycle_status,
 
-      successor  TYPE c LENGTH 32,
+      successor TYPE c LENGTH 32,
 
-    END OF ty_lifecycle.
+    END OF ty_life_cycle.
 
   TYPES:
     BEGIN OF ty_main,
@@ -317,7 +331,7 @@ INTERFACE zif_abapgit_aff_uiad_v1
 
       tiles                    TYPE ty_tiles,
 
-      lifecycle                TYPE ty_lifecycle,
+      life_cycle               TYPE ty_life_cycle,
 
     END OF ty_main.
 
