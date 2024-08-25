@@ -2,7 +2,7 @@ INTERFACE zif_abapgit_aff_aifr_v1
   PUBLIC.
   TYPES:
     BEGIN OF ty_recipient_details,
-      namespace_object_name TYPE c LENGTH 15,
+      namespace TYPE c LENGTH 15,
     END OF ty_recipient_details,
 
     BEGIN OF ty_main,
