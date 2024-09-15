@@ -39,6 +39,15 @@ INTERFACE zif_abapgit_aff_sajc_v1
       list_box     TYPE ty_screen_element VALUE 'L',
     END OF co_screen_element.
 
+  TYPES ty_value_help_type TYPE c LENGTH 1.
+
+  CONSTANTS:
+    BEGIN OF co_value_help_type,
+      none     TYPE ty_value_help_type VALUE ' ',
+      cds_view TYPE ty_value_help_type VALUE 'V',
+      domain   TYPE ty_value_help_type VALUE 'O',
+    END OF co_value_help_type.
+
   TYPES:
     BEGIN OF ty_parameter,
       name                 TYPE ty_parameter_name,
@@ -51,6 +60,8 @@ INTERFACE zif_abapgit_aff_sajc_v1
       enabled_by_parameter TYPE ty_parameter_name,
       screen_element       TYPE ty_screen_element,
       radio_button_group   TYPE ty_radio_button_group,
+      value_help           TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      value_help_type      TYPE ty_value_help_type,
       backend_call         TYPE abap_bool,
       single_values        TYPE abap_bool,
       text_editor_lines    TYPE i,
