@@ -1,8 +1,11 @@
-INTERFACE zif_abapgit_aff_aifr_v1
+INTERFACE zif_abapgit_aff_desd_v1
   PUBLIC.
+
   TYPES:
+
     BEGIN OF ty_general_information,
-      namespace TYPE c LENGTH 15,
+      default_remote_schema_name TYPE c LENGTH 256,
+      uses_routing               TYPE abap_bool,
     END OF ty_general_information,
 
     BEGIN OF ty_main,
@@ -10,4 +13,5 @@ INTERFACE zif_abapgit_aff_aifr_v1
       header              TYPE zif_abapgit_aff_types_v1=>ty_header_60_cloud,
       general_information TYPE ty_general_information,
     END OF ty_main.
+
 ENDINTERFACE.
