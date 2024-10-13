@@ -1,8 +1,8 @@
-INTERFACE zif_abapgit_aff_aifr_v1
+INTERFACE zif_abapgit_aff_aifn_v1
   PUBLIC.
   TYPES:
     BEGIN OF ty_general_information,
-      namespace TYPE c LENGTH 15,
+      aif_namespace TYPE c LENGTH 6,
     END OF ty_general_information,
 
     BEGIN OF ty_main,
