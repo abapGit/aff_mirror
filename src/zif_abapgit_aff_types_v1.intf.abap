@@ -73,6 +73,13 @@ INTERFACE zif_abapgit_aff_types_v1 PUBLIC.
     END OF ty_header_80.
 
   TYPES:
+    BEGIN OF ty_header_80_cloud,
+      description           TYPE ty_description_80,
+      original_language     TYPE ty_original_language,
+      abap_language_version TYPE ty_abap_language_version_cloud,
+    END OF ty_header_80_cloud.
+
+  TYPES:
     BEGIN OF ty_header_100,
       description           TYPE ty_description_100,
       original_language     TYPE ty_original_language,
