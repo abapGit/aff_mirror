@@ -3,26 +3,16 @@ INTERFACE zif_abapgit_aff_scp1_v1
 
   TYPES ty_type TYPE c LENGTH 3.
 
-
   CONSTANTS:
     BEGIN OF co_type,
       simple       TYPE ty_type VALUE 'TMV',
       hierarchical TYPE ty_type VALUE 'TMP',
     END OF co_type.
 
-  TYPES ty_release TYPE c LENGTH 10.
-
-  CONSTANTS:
-    BEGIN OF co_validity,
-      all_releases TYPE ty_release VALUE '*',
-    END OF co_validity.
-
   TYPES:
     BEGIN OF ty_attributes,
-      type               TYPE ty_type,
-      software_component TYPE c LENGTH 30,
-      minimum_release    TYPE ty_release,
-      maximum_release    TYPE ty_release,
+      type                  TYPE ty_type,
+      is_relevant_for_scope TYPE abap_bool,
     END OF ty_attributes.
 
   TYPES ty_object_type TYPE c LENGTH 1.
@@ -49,10 +39,7 @@ INTERFACE zif_abapgit_aff_scp1_v1
   CONSTANTS:
     BEGIN OF co_field_attribute,
       fixed_key_field TYPE ty_field_attribute_value VALUE 'FKY',
-      key_field       TYPE ty_field_attribute_value VALUE 'KEY',
       default_value   TYPE ty_field_attribute_value VALUE 'USE',
-      fixed_value     TYPE ty_field_attribute_value VALUE 'FIX',
-      variable        TYPE ty_field_attribute_value VALUE 'VAR',
     END OF co_field_attribute.
 
   TYPES:
@@ -87,8 +74,8 @@ INTERFACE zif_abapgit_aff_scp1_v1
 
   TYPES:
     BEGIN OF ty_field_attribute,
-      field_name            TYPE c LENGTH 30,
-      field_attribute_value TYPE ty_field_attribute_value,
+      field_name      TYPE c LENGTH 30,
+      field_attribute TYPE ty_field_attribute_value,
     END OF ty_field_attribute.
 
   TYPES ty_field_attributes TYPE SORTED TABLE OF ty_field_attribute WITH UNIQUE KEY field_name.
@@ -115,7 +102,8 @@ INTERFACE zif_abapgit_aff_scp1_v1
 
   TYPES:
     BEGIN OF ty_sub_bcset,
-      name TYPE c LENGTH 32,
+      name                  TYPE c LENGTH 32,
+      position_in_hierarchy TYPE i,
     END OF ty_sub_bcset.
 
   TYPES ty_sub_bcsets TYPE SORTED TABLE OF ty_sub_bcset WITH UNIQUE KEY name.
