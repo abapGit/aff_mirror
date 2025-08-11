@@ -1,4 +1,4 @@
-INTERFACE zif_abapgit_aff_ddls_v1
+INTERFACE zif_abapgit_aff_srvd_v1
   PUBLIC.
 
   TYPES ty_source_type TYPE c LENGTH 1.
@@ -7,18 +7,8 @@ INTERFACE zif_abapgit_aff_ddls_v1
 
   CONSTANTS:
     BEGIN OF co_source_type,
-      ddic_based_view    TYPE ty_source_type VALUE 'V',
-      view_entity        TYPE ty_source_type VALUE 'W',
-      view_extend        TYPE ty_source_type VALUE 'E',
-      view_entity_extend TYPE ty_source_type VALUE 'X',
-      table_function     TYPE ty_source_type VALUE 'F',
-      table_entity       TYPE ty_source_type VALUE 'T',
-      abstract_entity    TYPE ty_source_type VALUE 'A',
-      custom_entity      TYPE ty_source_type VALUE 'Q',
-      hierarchy          TYPE ty_source_type VALUE 'H',
-      projection_view    TYPE ty_source_type VALUE 'P',
-      external_entity    TYPE ty_source_type VALUE 'O',
-      unknown            TYPE ty_source_type VALUE ' ',
+      definition         TYPE ty_source_type VALUE 'S',
+      extension          TYPE ty_source_type VALUE 'X',
     END OF co_source_type,
 
     BEGIN OF co_source_origin,
@@ -34,13 +24,18 @@ INTERFACE zif_abapgit_aff_ddls_v1
       service_consumption_model      TYPE ty_source_origin VALUE '9',
     END OF co_source_origin.
 
+
   TYPES:
+    BEGIN OF ty_general_information,
+      source_origin TYPE ty_source_origin,
+      source_type   TYPE ty_source_type,
+    END OF ty_general_information,
+
     BEGIN OF ty_main,
-      format_version TYPE zif_abapgit_aff_types_v1=>ty_format_version,
-      header         TYPE zif_abapgit_aff_types_v1=>ty_header_60,
-      source_origin  TYPE ty_source_origin,
-      source_type    TYPE ty_source_type,
-      parent_name    TYPE c LENGTH 40,
+      format_version      TYPE zif_abapgit_aff_types_v1=>ty_format_version,
+      header              TYPE zif_abapgit_aff_types_v1=>ty_header_60,
+      general_information TYPE ty_general_information,
+
     END OF ty_main.
 
 ENDINTERFACE.
