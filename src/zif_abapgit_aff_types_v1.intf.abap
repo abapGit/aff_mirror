@@ -36,6 +36,8 @@ INTERFACE zif_abapgit_aff_types_v1 PUBLIC.
 
   TYPES ty_object_name_30 TYPE c LENGTH 30.
 
+  TYPES ty_object_name_40 TYPE c LENGTH 40.
+
   TYPES ty_original_language TYPE sy-langu.
 
   TYPES:
