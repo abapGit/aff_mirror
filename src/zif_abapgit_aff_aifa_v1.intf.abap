@@ -22,8 +22,9 @@ INTERFACE zif_abapgit_aff_aifa_v1
 
   TYPES:
     BEGIN OF ty_field_to_check,
-      type TYPE ty_field_type,
-      name TYPE string,
+      type  TYPE ty_field_type,
+      name  TYPE string,
+      value TYPE string,
     END OF ty_field_to_check,
     ty_fields_to_check TYPE STANDARD TABLE OF ty_field_to_check WITH DEFAULT KEY.
 
