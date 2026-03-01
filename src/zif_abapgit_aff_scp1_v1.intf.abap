@@ -30,7 +30,7 @@ INTERFACE zif_abapgit_aff_scp1_v1
 
   CONSTANTS:
     BEGIN OF co_operation_at_activation,
-      modify TYPE ty_operation_at_activation VALUE '',
+      upsert TYPE ty_operation_at_activation VALUE '',
       delete TYPE ty_operation_at_activation VALUE 'L',
     END OF co_operation_at_activation.
 
@@ -40,6 +40,7 @@ INTERFACE zif_abapgit_aff_scp1_v1
     BEGIN OF co_field_attribute,
       fixed_key_field TYPE ty_field_attribute_value VALUE 'FKY',
       default_value   TYPE ty_field_attribute_value VALUE 'USE',
+      forbidden_field TYPE ty_field_attribute_value VALUE 'LOC',
     END OF co_field_attribute.
 
   TYPES:
