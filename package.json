@@ -2,8 +2,7 @@
   "name": "aff_mirror",
   "private": true,
   "version": "1.0.0",
-  "description": "Mirror of aff",
-  "main": "index.js",
+  "description": "AFF Mirror",
   "scripts": {
     "clone": "git clone https://github.com/SAP/abap-file-formats input && rm -r input/file-formats/*/examples/* && rm input/file-formats/*.json && rm input/file-formats/*/type/*.json",
     "lint_result": "abaplint abaplint.json",
@@ -23,6 +22,6 @@
   },
   "homepage": "https://github.com/abapGit/aff_mirror#readme",
   "dependencies": {
-    "@abaplint/cli": "^2.119.50"
+    "@abaplint/cli": "^2.120.9"
   }
 }

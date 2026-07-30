@@ -1,22 +1,15 @@
-INTERFACE zif_abapgit_aff_http_v1
+INTERFACE zif_abapgit_aff_iwng_v1
   PUBLIC.
-
   TYPES:
-    "! <p class="shorttext">General Information</p>
-    "! General information
-    "! $required
     BEGIN OF ty_general_information,
-      "! <p class="shorttext">Handler Class</p>
-      "! Handler class
-      handler_class TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      "! <p class="shorttext">URL</p>
-      "! URL
-      url           TYPE string,
+      "! <p class="shorttext">Provider Class</p>
+      "! Provider class
+      "! $required
+      provider_class TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
     END OF ty_general_information.
-
   TYPES:
-    "! <p class="shorttext">HTTP Service</p>
-    "! HTTP Service
+    "! <p class="shorttext">Notification Provider Object</p>
+    "! Notification provider object
     BEGIN OF ty_main,
       "! <p class="shorttext">Format Version</p>
       "! Format version
@@ -31,5 +24,4 @@ INTERFACE zif_abapgit_aff_http_v1
       "! $required
       general_information TYPE ty_general_information,
     END OF ty_main.
-
 ENDINTERFACE.
