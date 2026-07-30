@@ -8,7 +8,7 @@
     "lint_result": "abaplint abaplint.json",
     "fix_result": "abaplint abaplint.json --fix",
     "rename": "abaplint abaplint_rename.json --rename && rm -rf src/* && cp -r output/input/file-formats/* src/ && mv ./src/*/type/* ./src/",
-    "mirror": "rm -rf input && rm -rf output && npm run clone && npm run rename && npm run fix_result",
+    "mirror": "rm -rf input && rm -rf output && npm run clone && npm run rename && npm run fix_result && npm run generate_xml",
     "generate_xml": "bash ./add-xml.sh"
   },
   "repository": {
