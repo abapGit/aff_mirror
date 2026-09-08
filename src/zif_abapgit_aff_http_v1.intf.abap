@@ -3,8 +3,9 @@ INTERFACE zif_abapgit_aff_http_v1
 
   TYPES:
     BEGIN OF ty_general_information,
-      handler_class TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
-      url           TYPE string,
+      handler_class  TYPE zif_abapgit_aff_types_v1=>ty_object_name_30,
+      service_path   TYPE string,
+      token_handling TYPE abap_bool,
     END OF ty_general_information.
 
   TYPES:

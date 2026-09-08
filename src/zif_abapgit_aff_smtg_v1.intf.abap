@@ -9,7 +9,7 @@ INTERFACE zif_abapgit_aff_smtg_v1
       email_subject               TYPE c LENGTH 255,
       is_plaintext_auto_generated TYPE abap_bool,
     END OF ty_general_information.
-  " Corresponding content ist stored in a separate file and implemented as action
+  " Corresponding content is stored in a separate file and implemented as action
 
   TYPES:
     BEGIN OF ty_template_content,
